@@ -7,5 +7,8 @@ import retrofit2.http.Path
 
 interface BookApiService {
     @GET("/books/{bookId}")
-    fun getBookData( @Path("bookId") bookId:Int): Single<Book>
+    fun getBookData(
+        @Path("bookId") bookId: Int,  // retrofit will make this a path parameter
+    ): Single<Book>
+
 }

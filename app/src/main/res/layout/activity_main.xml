@@ -81,20 +81,22 @@
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_view_available"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_random_book"
+            app:layout_constraintTop_toTopOf="@+id/text_view_author"
             app:showWhenLoading="@{viewmodel.book}" />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/error"
-            app:showWhenError="@{viewmodel.book}"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/progressBar" />
+            app:layout_constraintTop_toTopOf="@+id/progressBar"
+            app:showWhenError="@{viewmodel.book}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
